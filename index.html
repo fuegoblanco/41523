@@ -70,7 +70,7 @@
                             </div>
                             <div class="col-lg-2 col-md-2 col-2">
                                 <div class="header-right">
-                                    <a class="theme-btn" href="rsvp.html"><span class="text">RSVP</span> <span class="mobile">
+                                    <a class="theme-btn" href="#respond"><span class="text">RSVP</span> <span class="mobile">
                                         <i class="fi flaticon-user"></i>
                                     </span></a>
                                 </div>
@@ -418,6 +418,63 @@
         <!-- start of wpo-contact-section -->
        
 
+        <!-- end of wpo-contact-section -->
+        <!-- start wpo-team-section -->
+      
+        <!-- end wpo-team-section -->
+        <!-- start wpo-event-section -->
+        <section class="wpo-event-section section-padding" id="event">
+            <div class="container">
+                <div class="row">
+                    <div class="wpo-section-title-s2">
+                        <div class="section-title-icon">
+                            <i class="fi flaticon-dove"></i>
+                        </div>
+                        <h2>When & Where</h2>
+                    </div>
+                </div>
+                <div class="wpo-event-wrap center">
+                    <div class="row">
+                        <div class="col col-lg-4 col-md-6 col-12">
+                            <div class="wpo-event-item">
+                                <div class="wpo-event-text">
+                                    <h2>The Ceremony</h2>
+                                    <ul>
+                                        <li>Saturday, 15 April, 2022 <br>
+                                            12:00 pm</li>
+                                            <li>Catedral de San Cristóbal de las Casas</li>
+                                        <li>Plaza 31 de Marzo Norte No. 3, Centro, 29200 San Cristóbal de las Casas, Chiapas, MX</li>
+                                      
+
+                                        <li> <a class="popup-gmaps"
+                                                href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3820.79753875285!2d-92.64150823513265!3d16.73695083847144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ed453df3525fdb%3A0x6b2596848ccc3f87!2sCatedral%20de%20San%20Crist%C3%B3bal%20de%20las%20Casas!5e0!3m2!1sen!2smx!4v1673908533316!5m2!1sen!2smx&z=12">See
+                                                Location</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-lg-4 col-md-6 col-12">
+                            <div class="wpo-event-item">
+                                <div class="wpo-event-text">
+                                    <h2>The Reception</h2>
+                                    <ul>
+                                        <li>Saturday, 15 April, 2022 <br>
+                                            2:00 pm </li>
+                                            <li>Casa del Lago</li>
+                                        <li>Molino de La Isla 6, La Isla, 29240 San Cristóbal de las Casas, Chiapas, MX</li>
+                                        <li> <a class="popup-gmaps"
+                                            href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3820.723965448852!2d-92.64781656511232!3d16.7406193!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ed451746c5056b%3A0x9e3e69dd8025a390!2sSalon%20Casa%20del%20Lago!5e0!3m2!1sen!2smx!4v1673908880754!5m2!1sen!2smx">See
+                                            Location</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+
+            </div> <!-- end container -->
+        </section>
         <section class="wpo-contact-section section-padding" id="RSVP">
             <div class="container">
                 <div class="wpo-contact-section-wrapper">
@@ -428,29 +485,40 @@
                             </div>
                         </div>
                         <center>
-                    <form name="contact" method="POST" data-netlify="true">
-                        <p>
-                            <label>Your Name: <input type="text" name="name" /></label>
-                        </p>
-                        <p>
-                            <label>Your Email: <input type="email" name="email" /></label>
-                        </p>
-                        <p>
-                            <label>Your Role: <select name="role[]" multiple>
-                                    <option value="leader">Leader</option>
-                                    <option value="follower">Follower</option>
-                                </select></label>
-                        </p>
-                        <p>
-                            <label>Message: <textarea name="message"></textarea></label>
-                        </p>
-                        <p>
-                            <button type="submit">Send</button>
-                        </p>
-                    </form>
+                            <form id='respond' name="contact" method="POST" data-netlify="true">
+                                <p>
+                                    <label>Name/Nombre: <input type="text" name="name" /></label>
+                                </p>
+                                <p>
+                                    <label>Email/Correo Electrónico: <input type="email" name="email" /></label>
+                                </p>
+                                <p>
+                                    <input type="checkbox" id="attend" name="attend" value="no">
+                                    <label for="attendno"> I am unable to attend/No puedo asistir</label><br>
+                                    <input type="checkbox" id="attend" name="attend" value="yes">
+                                    <label for="attendyes"> I will be attending/Asistiré</label><br>
 
+                                </p>
+                                <p>
+                                    <label for="guests">number of guests:</label>
+                                    
+                                    <select name="guestsattending" id="guests">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                 
 
-                    </center>
+                                </p>
+                                <p>
+                                    <button type="submit">RSVP / SRC</button>
+                                </p>
+                            </form>
+        
+        
+                        </center>
                         <div class="border-style"></div>
                     </div>
                     <div class="vector-1">
@@ -468,76 +536,78 @@
                 <img src="assets/images/rsvp/shape2.png" alt="">
             </div>
         </section>
-        <!-- end of wpo-contact-section -->
-        <!-- start wpo-team-section -->
-      
-        <!-- end wpo-team-section -->
-        <!-- start wpo-event-section -->
-        <section class="wpo-event-section section-padding" id="event">
-            <div class="container">
-                <div class="row">
-                    <div class="wpo-section-title-s2">
-                        <div class="section-title-icon">
-                            <i class="fi flaticon-dove"></i>
-                        </div>
-                        <h2>When & Where</h2>
-                    </div>
-                </div>
-                <div class="wpo-event-wrap">
-                    <div class="row">
-                        <div class="col col-lg-4 col-md-6 col-12">
-                            <div class="wpo-event-item">
-                                <div class="wpo-event-text">
-                                    <h2>The Reception</h2>
-                                    <ul>
-                                        <li>Monday, 25 Sep, 2022 <br>
-                                            1:00 PM – 4:30 PM</li>
-                                        <li>Estern Star Plaza, Road 123, USA</li>
-                                        <li>+1 234-567-8910</li>
 
-                                        <li> <a class="popup-gmaps"
-                                                href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3820.723965680134!2d-92.64562788513258!3d16.74061928846919!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ed451746c5056b%3A0x9e3e69dd8025a390!2sSalon%20Casa%20del%20Lago!5e0!3m2!1sen!2smx!4v1663001835961!5m2!1sen!2smxz">See
-                                                Location</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col col-lg-4 col-md-6 col-12">
-                            <div class="wpo-event-item">
-                                <div class="wpo-event-text">
-                                    <h2>The Ceremony</h2>
-                                    <ul>
-                                        <li>Monday, 25 Sep, 2022 <br>
-                                            1:00 PM – 4:30 PM</li>
-                                        <li>Estern Star Plaza, Road 123, USA</li>
-                                        <li>+1 234-567-8910</li>
-                                        <li> <a class="popup-gmaps"
-                                            href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3820.723965680134!2d-92.64562788513258!3d16.74061928846919!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ed451746c5056b%3A0x9e3e69dd8025a390!2sSalon%20Casa%20del%20Lago!5e0!3m2!1sen!2smx!4v1663001835961!5m2!1sen!2smxz">See
-                                            Location</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col col-lg-4 col-md-6 col-12">
-                            <div class="wpo-event-item">
-                                <div class="wpo-event-text">
-                                    <h2>Wedding Party</h2>
-                                    <ul>
-                                        <li>Monday, 25 Sep, 2022 <br>
-                                            1:00 PM – 4:30 PM</li>
-                                        <li>Estern Star Plaza, Road 123, USA</li>
-                                        <li>+1 234-567-8910</li>
-                                        <li><a class="popup-gmaps"
-                                            href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3820.723965680134!2d-92.64562788513258!3d16.74061928846919!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ed451746c5056b%3A0x9e3e69dd8025a390!2sSalon%20Casa%20del%20Lago!5e0!3m2!1sen!2smx!4v1663001835961!5m2!1sen!2smxz">See
-                                            Location</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+        <section >
+            <div> 
+                <center>
+                    <h2>Places to stay</h2>
+                    <p>Here are some places to stay in San Cristobal de las Casas</p>
+                    <p> there are many choices on Airbnb in the Centro district.</p>
+                    <div class="iframely-embed">
+                        <div class="iframely-responsive" style="height: 140px; width: 400px; padding-bottom: 0;"><a
+                                href="https://www.airbnb.com/s/San-Cristóbal-de-las-Casas--Mexico"
+                                data-iframely-url="//iframely.net/NSU3PC2?card=small"></a></div>
                     </div>
-                </div>
-
-            </div> <!-- end container -->
+                    <script async src="//iframely.net/embed.js"></script>
+                    <p> or any of the Hotels in that district as well.</p>
+                    <br>
+                <ul>
+                    <li><a
+                            href="https://www.google.com/travel/hotels/San%20Cristobal%20de%20las%20Casas%2C%20Chis./entity/ChgI5rjM9LX58q7eARoLL2cvMXRmaHp5eDEQAQ?q=san%20cristobal%20de%20las%20casas%20hotels&g2lb=2502548%2C2503771%2C2503781%2C4258168%2C4270442%2C4284970%2C4291517%2C4306835%2C4429192%2C4515404%2C4597339%2C4718358%2C4723331%2C4731329%2C4757164%2C4778035%2C4814050%2C4861688%2C4864715%2C4874190%2C4879519%2C4886082%2C4886480%2C4893075%2C4902277%2C4905351%2C4906023%2C4906050%2C4918081%2C4920622%2C4926165%2C4926489%2C4931359%2C4931975%2C4934345%2C4937897%2C4937954&hl=en-MX&gl=mx&cs=1&ssta=1&ts=CAESCgoCCAMKAggDEAAaIAoCGgASGhIUCgcI5w8QBBgLEgcI5w8QBBgSGAcyAggCKg0KCRICBAU6A01YThoA&rp=ogEhU2FuIENyaXN0b2JhbCBkZSBsYXMgQ2FzYXMsIENoaXMuOAFAAEgCmgICCAA&ap=MAFatgEKBQjGChAAIgNNWE4qFgoHCOcPEAQYCxIHCOcPEAQYEhgHIAKwAQBYAWgBcgQIAhgAmgEjEiFTYW4gQ3Jpc3RvYmFsIGRlIGxhcyBDYXNhcywgQ2hpcy6iASsKDS9nLzExYmM1aDVmaDkSGlNhbiBDcmlzdG9iYWwgZGUgbGFzIENhc2FzqgELCgMI4QISAghjGAGSAgIIDpICAggTkgICCA-SAgIIDZICAggSkgICCBSSAQIgAWgA&ictx=1&sa=X&utm_campaign=sharing&utm_medium=link&utm_source=htls&ved=0CDkQyvcEahgKEwiQrL2Ii9L8AhUAAAAAHQAAAAAQjQE">Hotel
+                            Hacienda Don Juan</a></li>
+                    <li><a
+                            href="https://www.google.com/travel/hotels/San%20Cristobal%20de%20las%20Casas%2C%20Chis./entity/ChgI1pmRo8ePl4oVGgwvZy8xMTNoc3l2cnIQAQ?q=san%20cristobal%20de%20las%20casas%20hotels&g2lb=2502548%2C2503771%2C2503781%2C4258168%2C4270442%2C4284970%2C4291517%2C4306835%2C4429192%2C4515404%2C4597339%2C4718358%2C4723331%2C4731329%2C4757164%2C4778035%2C4814050%2C4861688%2C4864715%2C4874190%2C4879519%2C4886082%2C4886480%2C4893075%2C4902277%2C4905351%2C4906023%2C4906050%2C4918081%2C4920622%2C4926165%2C4926489%2C4931359%2C4931975%2C4934345%2C4937897%2C4937954&hl=en-MX&gl=mx&cs=1&ssta=1&ts=CAESCgoCCAMKAggDEAAaIAoCGgASGhIUCgcI5w8QBBgLEgcI5w8QBBgSGAcyAggCKg0KCRICBAU6A01YThoA&rp=ogEhU2FuIENyaXN0b2JhbCBkZSBsYXMgQ2FzYXMsIENoaXMuOAFAAEgCmgICCAA&ap=MAFatgEKBQjGChAAIgNNWE4qFgoHCOcPEAQYCxIHCOcPEAQYEhgHIAKwAQBYAWgBcgQIAhgAmgEjEiFTYW4gQ3Jpc3RvYmFsIGRlIGxhcyBDYXNhcywgQ2hpcy6iASsKDS9nLzExYmM1aDVmaDkSGlNhbiBDcmlzdG9iYWwgZGUgbGFzIENhc2FzqgELCgMI4QISAghjGAGSAgIIDpICAggTkgICCA-SAgIIDZICAggSkgICCBSSAQIgAWgA&ictx=1&sa=X&utm_campaign=sharing&utm_medium=link&utm_source=htls&ved=0CFsQyvcEahgKEwiQrL2Ii9L8AhUAAAAAHQAAAAAQjQE">Hotel
+                            Bo</a></li>
+                    <li><a
+                            href="https://www.google.com/travel/hotels/San%20Cristobal%20de%20las%20Casas%2C%20Chis./entity/ChkIuffo2_aOypRcGg0vZy8xMWRkd3k1NWJsEAE?q=san%20cristobal%20de%20las%20casas%20hotels&g2lb=2502548%2C2503771%2C2503781%2C4258168%2C4270442%2C4284970%2C4291517%2C4306835%2C4429192%2C4515404%2C4597339%2C4718358%2C4723331%2C4731329%2C4757164%2C4778035%2C4814050%2C4861688%2C4864715%2C4874190%2C4879519%2C4886082%2C4886480%2C4893075%2C4902277%2C4905351%2C4906023%2C4906050%2C4918081%2C4920622%2C4926165%2C4926489%2C4931359%2C4931975%2C4934345%2C4937897%2C4937954&hl=en-MX&gl=mx&cs=1&ssta=1&ts=CAESCgoCCAMKAggDEAAaIAoCGgASGhIUCgcI5w8QBBgLEgcI5w8QBBgSGAcyAggCKg0KCRICBAU6A01YThoA&rp=ogEhU2FuIENyaXN0b2JhbCBkZSBsYXMgQ2FzYXMsIENoaXMuOAFAAEgCmgICCAA&ap=MAFatgEKBQjGChAAIgNNWE4qFgoHCOcPEAQYCxIHCOcPEAQYEhgHIAKwAQBYAWgBcgQIAhgAmgEjEiFTYW4gQ3Jpc3RvYmFsIGRlIGxhcyBDYXNhcywgQ2hpcy6iASsKDS9nLzExYmM1aDVmaDkSGlNhbiBDcmlzdG9iYWwgZGUgbGFzIENhc2FzqgELCgMI4QISAghjGAGSAgIIDpICAggTkgICCA-SAgIIDZICAggSkgICCBSSAQIgAWgA&ictx=1&sa=X&utm_campaign=sharing&utm_medium=link&utm_source=htls&ved=0CHQQyvcEahgKEwiQrL2Ii9L8AhUAAAAAHQAAAAAQjQE">PALACE
+                            SCLC HOTEL & BREWERY</a></li>
+                    <li><a
+                            href="https://www.google.com/travel/hotels/San%20Cristobal%20de%20las%20Casas%2C%20Chis./entity/ChkIs7at0OGfqbKDARoML2cvMTI0dDFydjdkEAE?q=san%20cristobal%20de%20las%20casas%20hotels&g2lb=2502548%2C2503771%2C2503781%2C4258168%2C4270442%2C4284970%2C4291517%2C4306835%2C4429192%2C4515404%2C4597339%2C4718358%2C4723331%2C4731329%2C4757164%2C4778035%2C4814050%2C4861688%2C4864715%2C4874190%2C4879519%2C4886082%2C4886480%2C4893075%2C4902277%2C4905351%2C4906023%2C4906050%2C4918081%2C4920622%2C4926165%2C4926489%2C4931359%2C4931975%2C4934345%2C4937897%2C4937954&hl=en-MX&gl=mx&cs=1&ssta=1&ts=CAESCgoCCAMKAggDEAAaIAoCGgASGhIUCgcI5w8QBBgLEgcI5w8QBBgSGAcyAggCKg0KCRICBAU6A01YThoA&rp=ogEhU2FuIENyaXN0b2JhbCBkZSBsYXMgQ2FzYXMsIENoaXMuOAFAAEgCmgICCAA&ap=MAFatgEKBQjGChAAIgNNWE4qFgoHCOcPEAQYCxIHCOcPEAQYEhgHIAKwAQBYAWgBcgQIAhgAmgEjEiFTYW4gQ3Jpc3RvYmFsIGRlIGxhcyBDYXNhcywgQ2hpcy6iASsKDS9nLzExYmM1aDVmaDkSGlNhbiBDcmlzdG9iYWwgZGUgbGFzIENhc2FzqgELCgMI4QISAghjGAGSAgIIDpICAggTkgICCA-SAgIIDZICAggSkgICCBSSAQIgAWgA&ictx=1&sa=X&utm_campaign=sharing&utm_medium=link&utm_source=htls&ved=0CJMBEMr3BGoYChMIkKy9iIvS_AIVAAAAAB0AAAAAEI0B">Plaza
+                            Gallery Hotel Boutique</a></li>
+                    <li><a
+                            href="https://www.google.com/travel/hotels/San%20Cristobal%20de%20las%20Casas%2C%20Chis./entity/ChcI8bOig_v44ZYJGgsvZy8xdjFrcTZrcRAB?q=san%20cristobal%20de%20las%20casas%20hotels&g2lb=2502548%2C2503771%2C2503781%2C4258168%2C4270442%2C4284970%2C4291517%2C4306835%2C4429192%2C4515404%2C4597339%2C4718358%2C4723331%2C4731329%2C4757164%2C4778035%2C4814050%2C4861688%2C4864715%2C4874190%2C4879519%2C4886082%2C4886480%2C4893075%2C4902277%2C4905351%2C4906023%2C4906050%2C4918081%2C4920622%2C4926165%2C4926489%2C4931359%2C4931975%2C4934345%2C4937897%2C4937954&hl=en-MX&gl=mx&cs=1&ssta=1&ts=CAESCgoCCAMKAggDEAAaIAoCGgASGhIUCgcI5w8QBBgLEgcI5w8QBBgSGAcyAggCKg0KCRICBAU6A01YThoA&rp=ogEhU2FuIENyaXN0b2JhbCBkZSBsYXMgQ2FzYXMsIENoaXMuOAFAAEgCmgICCAA&ap=MAFatgEKBQjGChAAIgNNWE4qFgoHCOcPEAQYCxIHCOcPEAQYEhgHIAKwAQBYAWgBcgQIAhgAmgEjEiFTYW4gQ3Jpc3RvYmFsIGRlIGxhcyBDYXNhcywgQ2hpcy6iASsKDS9nLzExYmM1aDVmaDkSGlNhbiBDcmlzdG9iYWwgZGUgbGFzIENhc2FzqgELCgMI4QISAghjGAGSAgIIDpICAggTkgICCA-SAgIIDZICAggSkgICCBSSAQIgAWgA&ictx=1&sa=X&utm_campaign=sharing&utm_medium=link&utm_source=htls&ved=0CK4BEMr3BGoYChMIkKy9iIvS_AIVAAAAAB0AAAAAEI0B">Hotel
+                            Casa Mexicana</a></li>
+                    <li><a
+                            href="https://www.google.com/travel/hotels/San%20Cristobal%20de%20las%20Casas%2C%20Chis./entity/ChoI2Jfx-oOu3Lj4ARoNL2cvMTFiNzNra2x6eBAB?q=san%20cristobal%20de%20las%20casas%20hotels&g2lb=2502548%2C2503771%2C2503781%2C4258168%2C4270442%2C4284970%2C4291517%2C4306835%2C4429192%2C4515404%2C4597339%2C4718358%2C4723331%2C4731329%2C4757164%2C4778035%2C4814050%2C4861688%2C4864715%2C4874190%2C4879519%2C4886082%2C4886480%2C4893075%2C4902277%2C4905351%2C4906023%2C4906050%2C4918081%2C4920622%2C4926165%2C4926489%2C4931359%2C4931975%2C4934345%2C4937897%2C4937954&hl=en-MX&gl=mx&cs=1&ssta=1&ts=CAESCgoCCAMKAggDEAAaIAoCGgASGhIUCgcI5w8QBBgLEgcI5w8QBBgSGAcyAggCKg0KCRICBAU6A01YThoA&rp=ogEhU2FuIENyaXN0b2JhbCBkZSBsYXMgQ2FzYXMsIENoaXMuOAFAAEgCmgICCAA&ap=MAFatgEKBQjGChAAIgNNWE4qFgoHCOcPEAQYCxIHCOcPEAQYEhgHIAKwAQBYAWgBcgQIAhgAmgEjEiFTYW4gQ3Jpc3RvYmFsIGRlIGxhcyBDYXNhcywgQ2hpcy6iASsKDS9nLzExYmM1aDVmaDkSGlNhbiBDcmlzdG9iYWwgZGUgbGFzIENhc2FzqgELCgMI4QISAghjGAGSAgIIDpICAggTkgICCA-SAgIIDZICAggSkgICCBSSAQIgAWgA&ictx=1&sa=X&utm_campaign=sharing&utm_medium=link&utm_source=htls&ved=0CMkBEMr3BGoYChMIkKy9iIvS_AIVAAAAAB0AAAAAEI0B">Casa
+                            Santa Lucia</a></li>
+                    <li><a
+                            href="https://www.google.com/travel/hotels/San%20Cristobal%20de%20las%20Casas%2C%20Chis./entity/ChgI0Zu7s8aihMD1ARoLL2cvMXRkMTNtNWsQAQ?q=san%20cristobal%20de%20las%20casas%20hotels&g2lb=2502548%2C2503771%2C2503781%2C4258168%2C4270442%2C4284970%2C4291517%2C4306835%2C4429192%2C4515404%2C4597339%2C4718358%2C4723331%2C4731329%2C4757164%2C4778035%2C4814050%2C4861688%2C4864715%2C4874190%2C4879519%2C4886082%2C4886480%2C4893075%2C4902277%2C4905351%2C4906023%2C4906050%2C4918081%2C4920622%2C4926165%2C4926489%2C4931359%2C4931975%2C4934345%2C4937897%2C4937954&hl=en-MX&gl=mx&cs=1&ssta=1&ts=CAESCgoCCAMKAggDEAAaIAoCGgASGhIUCgcI5w8QBBgLEgcI5w8QBBgSGAcyAggCKg0KCRICBAU6A01YThoA&rp=ogEhU2FuIENyaXN0b2JhbCBkZSBsYXMgQ2FzYXMsIENoaXMuOAFAAEgCmgICCAA&ap=MAFatgEKBQjGChAAIgNNWE4qFgoHCOcPEAQYCxIHCOcPEAQYEhgHIAKwAQBYAWgBcgQIAhgAmgEjEiFTYW4gQ3Jpc3RvYmFsIGRlIGxhcyBDYXNhcywgQ2hpcy6iASsKDS9nLzExYmM1aDVmaDkSGlNhbiBDcmlzdG9iYWwgZGUgbGFzIENhc2FzqgELCgMI4QISAghjGAGSAgIIDpICAggTkgICCA-SAgIIDZICAggSkgICCBSSAQIgAWgA&ictx=1&sa=X&utm_campaign=sharing&utm_medium=link&utm_source=htls&ved=0COQBEMr3BGoYChMIkKy9iIvS_AIVAAAAAB0AAAAAEI0B">Plaza
+                            Magnolias Hotel</a></li>
+                    <li><a
+                            href="https://www.google.com/travel/hotels/San%20Cristobal%20de%20las%20Casas%2C%20Chis./entity/ChgIsNT2sZmL_q79ARoLL2cvMXcwc2Q2cTMQAQ?q=san%20cristobal%20de%20las%20casas%20hotels&g2lb=2502548%2C2503771%2C2503781%2C4258168%2C4270442%2C4284970%2C4291517%2C4306835%2C4429192%2C4515404%2C4597339%2C4718358%2C4723331%2C4731329%2C4757164%2C4778035%2C4814050%2C4861688%2C4864715%2C4874190%2C4879519%2C4886082%2C4886480%2C4893075%2C4902277%2C4905351%2C4906023%2C4906050%2C4918081%2C4920622%2C4926165%2C4926489%2C4931359%2C4931975%2C4934345%2C4937897%2C4937954&hl=en-MX&gl=mx&cs=1&ssta=1&ts=CAESCgoCCAMKAggDEAAaIAoCGgASGhIUCgcI5w8QBBgLEgcI5w8QBBgSGAcyAggCKg0KCRICBAU6A01YThoA&rp=ogEhU2FuIENyaXN0b2JhbCBkZSBsYXMgQ2FzYXMsIENoaXMuOAFAAEgCmgICCAA&ap=MAFatgEKBQjGChAAIgNNWE4qFgoHCOcPEAQYCxIHCOcPEAQYEhgHIAKwAQBYAWgBcgQIAhgAmgEjEiFTYW4gQ3Jpc3RvYmFsIGRlIGxhcyBDYXNhcywgQ2hpcy6iASsKDS9nLzExYmM1aDVmaDkSGlNhbiBDcmlzdG9iYWwgZGUgbGFzIENhc2FzqgELCgMI4QISAghjGAGSAgIIDpICAggTkgICCA-SAgIIDZICAggSkgICCBSSAQIgAWgA&ictx=1&sa=X&utm_campaign=sharing&utm_medium=link&utm_source=htls&ved=0CP8BEMr3BGoYChMIkKy9iIvS_AIVAAAAAB0AAAAAEI0B">Casa
+                            del Alma Hotel Boutique & Spa</a></li>
+                    <li><a
+                            href="https://www.google.com/travel/hotels/San%20Cristobal%20de%20las%20Casas%2C%20Chis./entity/ChcIxN-SwNzQy89RGgsvZy8xd2w0cXo2chAB?q=san%20cristobal%20de%20las%20casas%20hotels&g2lb=2502548%2C2503771%2C2503781%2C4258168%2C4270442%2C4284970%2C4291517%2C4306835%2C4429192%2C4515404%2C4597339%2C4718358%2C4723331%2C4731329%2C4757164%2C4778035%2C4814050%2C4861688%2C4864715%2C4874190%2C4879519%2C4886082%2C4886480%2C4893075%2C4902277%2C4905351%2C4906023%2C4906050%2C4918081%2C4920622%2C4926165%2C4926489%2C4931359%2C4931975%2C4934345%2C4937897%2C4937954&hl=en-MX&gl=mx&cs=1&ssta=1&ts=CAESCgoCCAMKAggDEAAaIAoCGgASGhIUCgcI5w8QBBgLEgcI5w8QBBgSGAcyAggCKg0KCRICBAU6A01YThoA&rp=ogEhU2FuIENyaXN0b2JhbCBkZSBsYXMgQ2FzYXMsIENoaXMuOAFAAEgCmgICCAA&ap=MAFatgEKBQjGChAAIgNNWE4qFgoHCOcPEAQYCxIHCOcPEAQYEhgHIAKwAQBYAWgBcgQIAhgAmgEjEiFTYW4gQ3Jpc3RvYmFsIGRlIGxhcyBDYXNhcywgQ2hpcy6iASsKDS9nLzExYmM1aDVmaDkSGlNhbiBDcmlzdG9iYWwgZGUgbGFzIENhc2FzqgELCgMI4QISAghjGAGSAgIIDpICAggTkgICCA-SAgIIDZICAggSkgICCBSSAQIgAWgA&ictx=1&sa=X&utm_campaign=sharing&utm_medium=link&utm_source=htls&ved=0CJoCEMr3BGoYChMIkKy9iIvS_AIVAAAAAB0AAAAAEI0B">Hotel
+                            Casavieja</a></li>
+                    <li><a
+                            href="https://www.google.com/travel/hotels/San%20Cristobal%20de%20las%20Casas%2C%20Chis./entity/ChkIw-GlwdWapJYCGg0vZy8xMWI2ZDF0MTV6EAE?q=san%20cristobal%20de%20las%20casas%20hotels&g2lb=2502548%2C2503771%2C2503781%2C4258168%2C4270442%2C4284970%2C4291517%2C4306835%2C4429192%2C4515404%2C4597339%2C4718358%2C4723331%2C4731329%2C4757164%2C4778035%2C4814050%2C4861688%2C4864715%2C4874190%2C4879519%2C4886082%2C4886480%2C4893075%2C4902277%2C4905351%2C4906023%2C4906050%2C4918081%2C4920622%2C4926165%2C4926489%2C4931359%2C4931975%2C4934345%2C4937897%2C4937954&hl=en-MX&gl=mx&cs=1&ssta=1&ts=CAESCgoCCAMKAggDEAAaIAoCGgASGhIUCgcI5w8QBBgLEgcI5w8QBBgSGAcyAggCKg0KCRICBAU6A01YThoA&rp=ogEhU2FuIENyaXN0b2JhbCBkZSBsYXMgQ2FzYXMsIENoaXMuOAFAAEgCmgICCAA&ap=MAFatgEKBQjGChAAIgNNWE4qFgoHCOcPEAQYCxIHCOcPEAQYEhgHIAKwAQBYAWgBcgQIAhgAmgEjEiFTYW4gQ3Jpc3RvYmFsIGRlIGxhcyBDYXNhcywgQ2hpcy6iASsKDS9nLzExYmM1aDVmaDkSGlNhbiBDcmlzdG9iYWwgZGUgbGFzIENhc2FzqgELCgMI4QISAghjGAGSAgIIDpICAggTkgICCA-SAgIIDZICAggSkgICCBSSAQIgAWgA&ictx=1&sa=X&utm_campaign=sharing&utm_medium=link&utm_source=htls&ved=0CLUCEMr3BGoYChMIkKy9iIvS_AIVAAAAAB0AAAAAEI0B">hotel
+                            provincia</a></li>
+                    <li><a
+                            href="https://www.google.com/travel/hotels/San%20Cristobal%20de%20las%20Casas%2C%20Chis./entity/ChcIjJih74uy67hQGgsvZy8xdmNfcXFoZhAB?q=san%20cristobal%20de%20las%20casas%20hotels&g2lb=2502548%2C2503771%2C2503781%2C4258168%2C4270442%2C4284970%2C4291517%2C4306835%2C4429192%2C4515404%2C4597339%2C4718358%2C4723331%2C4731329%2C4757164%2C4778035%2C4814050%2C4861688%2C4864715%2C4874190%2C4879519%2C4886082%2C4886480%2C4893075%2C4902277%2C4905351%2C4906023%2C4906050%2C4918081%2C4920622%2C4926165%2C4926489%2C4931359%2C4931975%2C4934345%2C4937897%2C4937954&hl=en-MX&gl=mx&cs=1&ssta=1&ts=CAESCgoCCAMKAggDEAAaIAoCGgASGhIUCgcI5w8QBBgLEgcI5w8QBBgSGAcyAggCKg0KCRICBAU6A01YThoA&rp=ogEhU2FuIENyaXN0b2JhbCBkZSBsYXMgQ2FzYXMsIENoaXMuOAFAAEgCmgICCAA&ap=MAFatgEKBQjGChAAIgNNWE4qFgoHCOcPEAQYCxIHCOcPEAQYEhgHIAKwAQBYAWgBcgQIAhgAmgEjEiFTYW4gQ3Jpc3RvYmFsIGRlIGxhcyBDYXNhcywgQ2hpcy6iASsKDS9nLzExYmM1aDVmaDkSGlNhbiBDcmlzdG9iYWwgZGUgbGFzIENhc2FzqgELCgMI4QISAghjGAGSAgIIDpICAggTkgICCA-SAgIIDZICAggSkgICCBSSAQIgAWgA&ictx=1&sa=X&utm_campaign=sharing&utm_medium=link&utm_source=htls&ved=0CNACEMr3BGoYChMIkKy9iIvS_AIVAAAAAB0AAAAAEI0B">Hotel
+                            Parador Margarita</a></li>
+                    <li><a
+                            href="https://www.google.com/travel/hotels/San%20Cristobal%20de%20las%20Casas%2C%20Chis./entity/ChkIvZe1v9eyjcQeGg0vZy8xMWI2cWxmdjBkEAE?q=san%20cristobal%20de%20las%20casas%20hotels&g2lb=2502548%2C2503771%2C2503781%2C4258168%2C4270442%2C4284970%2C4291517%2C4306835%2C4429192%2C4515404%2C4597339%2C4718358%2C4723331%2C4731329%2C4757164%2C4778035%2C4814050%2C4861688%2C4864715%2C4874190%2C4879519%2C4886082%2C4886480%2C4893075%2C4902277%2C4905351%2C4906023%2C4906050%2C4918081%2C4920622%2C4926165%2C4926489%2C4931359%2C4931975%2C4934345%2C4937897%2C4937954&hl=en-MX&gl=mx&cs=1&ssta=1&ts=CAESCgoCCAMKAggDEAAaIAoCGgASGhIUCgcI5w8QBBgLEgcI5w8QBBgSGAcyAggCKg0KCRICBAU6A01YThoA&rp=ogEhU2FuIENyaXN0b2JhbCBkZSBsYXMgQ2FzYXMsIENoaXMuOAFAAEgCmgICCAA&ap=MAFatgEKBQjGChAAIgNNWE4qFgoHCOcPEAQYCxIHCOcPEAQYEhgHIAKwAQBYAWgBcgQIAhgAmgEjEiFTYW4gQ3Jpc3RvYmFsIGRlIGxhcyBDYXNhcywgQ2hpcy6iASsKDS9nLzExYmM1aDVmaDkSGlNhbiBDcmlzdG9iYWwgZGUgbGFzIENhc2FzqgELCgMI4QISAghjGAGSAgIIDpICAggTkgICCA-SAgIIDZICAggSkgICCBSSAQIgAWgA&ictx=1&sa=X&utm_campaign=sharing&utm_medium=link&utm_source=htls&ved=0COsCEMr3BGoYChMIkKy9iIvS_AIVAAAAAB0AAAAAEI0B">Casa
+                            Lum Hotel + Restaurante</a></li>
+                </ul>
+                <br>
+                <br>
+                   
+                </center>
+            </div>
+        </section>
+        <section>
+            <center>
+            <p>
+            If you are wanting to get a gift for the couple they have a registry at Amazon for guests from the United States. <br>
+            If you are are from Mexico we are registered at Liverpool and Coppel.<br>
+            the information will be provied to after you RSVP.<br>
+            </p>
+            <br>
+            <br>
+            Si desea obtener un regalo para la pareja, tienen un registro en Amazon para invitados de los Estados Unidos.<br>
+            Si eres de México estamos registrados en Liverpool y Coppel.<br>
+            la información se le proporcionará después de confirmar su asistencia.<br>
+        </center>
         </section>
         <!-- end wpo-event-section -->
         <!-- start wpo-partners-section -->
